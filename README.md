@@ -32,12 +32,12 @@ A creative, comic/graffiti-inspired developer portfolio website recreated faithf
 
 - **About Me**:
   - Left banner: Bright lime green comic poster with character sketch, handwritten *"FOCUS DISCIPLINE CONSISTENCY"* note, and graffiti splatters.
-  - Right: Story bio, CS undergrad credentials, and interactive *"Know More About Me"* modal displaying education, hackathon awards, and engineering philosophy.
+  - Right: Story bio, BSc.IT student credentials, and interactive *"Know More About Me"* modal displaying education and engineering philosophy.
 
 - **Contact & Footer**:
   - Bold *"LET'S MAKE SOMETHING DOPE!"* title with hand-drawn purple loop and click-to-trigger confetti explosion.
-  - One-click copy email button with feedback indicator (`hello@dikshant.dev`).
-  - Social media icon pills (GitHub, LinkedIn, Instagram, YouTube, Web).
+  - One-click copy email button with feedback indicator (`kunwardipson89@gmail.com`).
+  - Social media icon pills (GitHub, LinkedIn, Instagram, Web).
   - Cute animated blue monster mascot making a peace sign.
 
 ---
