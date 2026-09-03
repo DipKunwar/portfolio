@@ -42,7 +42,7 @@ export const ThreeHeroCanvas: React.FC = () => {
     scene.add(sceneGroup);
 
     // 1. Neon Lime Wireframe Dodecahedron
-    const dodecaGeo = new THREE.DodecahedronGeometry(1.2, 0);
+    const dodecaGeo = new THREE.DodecahedronGeometry(0.9, 0);
     const dodecaMat = new THREE.MeshStandardMaterial({
       color: 0xccff00,
       wireframe: true,
@@ -50,7 +50,7 @@ export const ThreeHeroCanvas: React.FC = () => {
       roughness: 0.2,
     });
     const dodecaMesh = new THREE.Mesh(dodecaGeo, dodecaMat);
-    dodecaMesh.position.set(3.6, 1.8, -1);
+    dodecaMesh.position.set(0.8, 2.4, -2.2);
     sceneGroup.add(dodecaMesh);
 
     // 2. Glossy Electric Violet Icosahedron
