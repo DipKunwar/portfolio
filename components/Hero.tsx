@@ -18,10 +18,10 @@ export const Hero: React.FC = () => {
       {/* 3D Interactive Three.js WebGL Canvas Background */}
       <ThreeHeroCanvas />
 
-      <div className="relative z-10 w-full max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 xl:pr-0 2xl:pr-0">
+      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
-          {/* Left Hero Content (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-4 sm:space-y-6 lg:pl-4 xl:pl-8 2xl:pl-12">
+          {/* Left Hero Content (lg:col-span-6 xl:col-span-7) */}
+          <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-start space-y-4 sm:space-y-6">
             {/* Handwritten "Hey, I'm" + Curved Arrow Doodle */}
             <div className="relative flex items-center gap-3 pl-2">
               <span className="font-['Caveat',cursive] text-2xl sm:text-3xl text-zinc-200 font-bold tracking-wide transform -rotate-3">
@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
                 <CrownDoodle className="w-10 sm:w-12 h-auto text-[#ccff00] drop-shadow-[0_0_10px_rgba(204,255,0,0.8)]" />
               </div>
 
-              <h1 className="font-['Permanent_Marker',cursive] text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] leading-[0.95] text-white tracking-wider uppercase drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]">
+              <h1 className="font-['Permanent_Marker',cursive] text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-8xl 2xl:text-[7rem] leading-[0.95] text-white tracking-wider uppercase drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]">
                 DIP KUNWAR
               </h1>
             </div>
@@ -92,9 +92,9 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Hero Illustration touching the right edge (5 cols) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0 lg:translate-x-4 xl:translate-x-8 2xl:translate-x-12">
-            <CharacterIllustration className="w-full max-w-[460px] sm:max-w-[540px] lg:max-w-[620px] xl:max-w-[700px] 2xl:max-w-[740px]" />
+          {/* Right Hero Illustration (lg:col-span-6 xl:col-span-5) */}
+          <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0">
+            <CharacterIllustration className="w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[660px] 2xl:max-w-[720px]" />
           </div>
         </div>
 

@@ -68,7 +68,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
           transformStyle: "preserve-3d",
           transition: isHovered ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
         }}
-        className="relative w-full max-w-[460px] sm:max-w-[540px] lg:max-w-[620px] xl:max-w-[700px] 2xl:max-w-[740px] will-change-transform"
+        className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[660px] 2xl:max-w-[720px] will-change-transform"
       >
         {/* Atmospheric Ambient Glow Pulsing in Background */}
         <div className="absolute -inset-10 bg-gradient-to-tr from-[#7c3aed]/35 via-[#38bdf8]/20 to-[#ccff00]/25 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse duration-3000 transform scale-95" />
@@ -130,7 +130,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
           title="Click me for confetti!"
         >
           <Image
-            src="/dip-avatar-v3.png"
+            src="/dip-avatar-v4.png"
             alt="Dip Kunwar Hero Illustration"
             width={1024}
             height={1024}
