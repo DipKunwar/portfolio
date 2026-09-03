@@ -49,7 +49,7 @@ export const QuickContactModal: React.FC<{
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "e88cf2f0-1c04-4c4f-9e7f-71b306b490f0",
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "37366565-94f1-45ec-a05f-d97ba5ef0f32",
           to_email: "kunwardipson89@gmail.com",
           from_name: formData.name,
           email: formData.email,
