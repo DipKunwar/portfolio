@@ -303,8 +303,8 @@ export const TerminalModal: React.FC<{
                   <span className="text-zinc-300">Node.js, Python, PostgreSQL, REST APIs, WebSockets</span>
                 </div>
                 <div className="p-2 bg-white/5 rounded-lg border border-white/5">
-                  <span className="text-[#f43f5e] font-bold block mb-1">3D & Creative Tools:</span>
-                  <span className="text-zinc-300">Blender, Shaders, Photoshop, After Effects, Figma</span>
+                  <span className="text-[#f43f5e] font-bold block mb-1">Design & UI Tools:</span>
+                  <span className="text-zinc-300">Photoshop, Figma, UI/UX Wireframing</span>
                 </div>
                 <div className="p-2 bg-white/5 rounded-lg border border-white/5">
                   <span className="text-[#eab308] font-bold block mb-1">DevOps & Tooling:</span>

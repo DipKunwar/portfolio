@@ -11,21 +11,24 @@ import {
 import { GithubIcon } from "./SocialIcons";
 
 export const GitHubStatsCard: React.FC = () => {
-  // Simulated GitHub Contribution Grid (20 weeks x 7 days)
-  const weeks = 20;
+  // Monthly GitHub Contribution Grid (6 weeks covering current month & active sprints)
+  const weeks = 6;
   const days = 7;
+  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
   const contributionGrid = useMemo(() => {
     const grid: number[][] = [];
     for (let w = 0; w < weeks; w++) {
       const weekCol: number[] = [];
       for (let d = 0; d < days; d++) {
         const isWeekend = d === 0 || d === 6;
-        const seed = (w * 7 + d * 3) % 11;
         let level = 0;
-        if (seed > 7) level = 3;
-        else if (seed > 4) level = 2;
-        else if (seed > 1 && !isWeekend) level = 1;
-        else if (w > 14) level = (w % 3) + 1;
+        if (w >= 3) {
+          // Recent weeks of active development
+          level = isWeekend ? (d === 0 ? 1 : 0) : ((w + d) % 3) + 1;
+        } else if (w >= 1 && !isWeekend) {
+          level = (d % 2 === 0) ? 2 : 1;
+        }
         weekCol.push(level);
       }
       grid.push(weekCol);
@@ -161,7 +164,7 @@ export const GitHubStatsCard: React.FC = () => {
                 <div style={{ width: "68%" }} className="h-full bg-[#3178c6]" title="TypeScript: 68%" />
                 <div style={{ width: "18%" }} className="h-full bg-[#38bdf8]" title="Next.js & React: 18%" />
                 <div style={{ width: "9%" }} className="h-full bg-[#ccff00]" title="Tailwind CSS: 9%" />
-                <div style={{ width: "5%" }} className="h-full bg-[#8b5cf6]" title="Three.js / GLSL: 5%" />
+                <div style={{ width: "5%" }} className="h-full bg-[#8b5cf6]" title="Three.js / WebGL: 5%" />
               </div>
               <div className="flex flex-wrap items-center gap-4 text-[11px] font-mono text-zinc-400">
                 <span className="flex items-center gap-1">
@@ -181,36 +184,58 @@ export const GitHubStatsCard: React.FC = () => {
           </div>
         </div>
 
-        {/* Contribution Graph Section */}
+        {/* Monthly Contribution Graph Section */}
         <div className="p-5 bg-[#161b22] border border-[#30363d] rounded-2xl relative z-10">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-4">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-emerald-400" />
               <span className="text-xs sm:text-sm font-mono font-bold text-white">
-                Yearly Coding Frequency & Git Commits
+                Monthly Coding Frequency & Git Commits
               </span>
             </div>
             <span className="text-xs text-zinc-400 font-mono">
-              Regular commits & continuous product shipping
+              Active monthly sprint & continuous feature shipping
             </span>
           </div>
 
-          {/* Grid View */}
-          <div className="overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-white/10">
-            <div className="flex gap-1.5 min-w-[500px]">
+          {/* Grid View with Weekday Labels */}
+          <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-white/10">
+            {/* Weekday indicator labels */}
+            <div className="flex flex-col gap-1.5 text-[10px] font-mono text-zinc-500 select-none pt-0.5">
+              <span>Mon</span>
+              <span className="opacity-0">Tue</span>
+              <span>Wed</span>
+              <span className="opacity-0">Thu</span>
+              <span>Fri</span>
+              <span className="opacity-0">Sat</span>
+              <span className="opacity-0">Sun</span>
+            </div>
+
+            {/* Weeks columns */}
+            <div className="flex gap-2">
               {contributionGrid.map((col, colIdx) => (
                 <div key={colIdx} className="flex flex-col gap-1.5">
                   {col.map((lvl, rowIdx) => (
                     <div
                       key={rowIdx}
-                      className={`w-3.5 h-3.5 rounded-sm border transition-transform hover:scale-125 hover:z-20 cursor-pointer ${getLevelColor(
+                      className={`w-4 h-4 rounded-sm border transition-transform hover:scale-125 hover:z-20 cursor-pointer ${getLevelColor(
                         lvl
                       )}`}
-                      title={`Activity level: ${lvl}`}
+                      title={`${weekdays[rowIdx]}: Activity level ${lvl}`}
                     />
                   ))}
                 </div>
               ))}
+            </div>
+
+            <div className="ml-4 pl-4 border-l border-white/10 flex flex-col justify-center gap-1 text-xs font-mono">
+              <div className="flex items-center gap-2">
+                <span className="text-emerald-400 font-bold">This Month:</span>
+                <span className="text-white font-semibold">Active Repository Sprint</span>
+              </div>
+              <p className="text-[11px] text-zinc-400">
+                Regular daily feature iterations, refactors & WebGL optimizations
+              </p>
             </div>
           </div>
 
