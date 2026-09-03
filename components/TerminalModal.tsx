@@ -51,6 +51,32 @@ const COMMAND_LIST = [
   { cmd: "exit", desc: "Close terminal session" },
 ];
 
+const createInitialLogs = (): CommandOutput[] => [
+  {
+    id: getNextLogId("init-ascii"),
+    type: "ascii",
+    content: (
+      <pre className="text-[9px] sm:text-xs font-mono font-bold text-[#ccff00] leading-none select-none overflow-x-auto">
+        {ASCII_BANNER}
+      </pre>
+    ),
+  },
+  {
+    id: getNextLogId("init-welcome"),
+    type: "text",
+    content: (
+      <div className="space-y-1 text-xs sm:text-sm font-mono text-zinc-300">
+        <p className="text-white font-semibold">
+          DipOS Interactive Terminal <span className="text-[#38bdf8]">v2.4</span> (x86_64-darwin-nepal)
+        </p>
+        <p className="text-zinc-400">
+          Type <span className="text-[#ccff00] font-bold">&apos;help&apos;</span> to see all commands or click the quick pills below.
+        </p>
+      </div>
+    ),
+  },
+];
+
 export const TerminalModal: React.FC<{
   isOpen: boolean;
   onClose: () => void;
@@ -60,31 +86,7 @@ export const TerminalModal: React.FC<{
   const [historyIndex, setHistoryIndex] = useState<number>(-1);
   const [isMaximized, setIsMaximized] = useState(false);
   const [isMatrixMode, setIsMatrixMode] = useState(false);
-  const [logs, setLogs] = useState<CommandOutput[]>([
-    {
-      id: "initial-ascii",
-      type: "ascii",
-      content: (
-        <pre className="text-[9px] sm:text-xs font-mono font-bold text-[#ccff00] leading-none select-none overflow-x-auto">
-          {ASCII_BANNER}
-        </pre>
-      ),
-    },
-    {
-      id: "initial-welcome",
-      type: "text",
-      content: (
-        <div className="space-y-1 text-xs sm:text-sm font-mono text-zinc-300">
-          <p className="text-white font-semibold">
-            DipOS Interactive Terminal <span className="text-[#38bdf8]">v2.4</span> (x86_64-darwin-nepal)
-          </p>
-          <p className="text-zinc-400">
-            Type <span className="text-[#ccff00] font-bold">&apos;help&apos;</span> to see all commands or click the quick pills below.
-          </p>
-        </div>
-      ),
-    },
-  ]);
+  const [logs, setLogs] = useState<CommandOutput[]>(createInitialLogs);
 
   const terminalEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -414,7 +416,7 @@ export const TerminalModal: React.FC<{
 
       case "clear":
       case "cls":
-        setLogs([]);
+        setLogs(createInitialLogs());
         setInput("");
         return;
 
