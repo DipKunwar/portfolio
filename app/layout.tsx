@@ -35,10 +35,10 @@ export const metadata: Metadata = {
       "Full-Stack Developer & BSc.IT Student building digital products, real-time streaming platforms, and interactive 3D web experiences.",
     images: [
       {
-        url: "/dip-avatar-v3.png",
-        width: 1024,
-        height: 1024,
-        alt: "Dip Kunwar - Full-Stack Developer",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dip Kunwar - Full-Stack Developer & Creative Coder",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Dip Kunwar | Full-Stack Developer & BSc.IT Student",
     description:
       "Full-Stack Developer building high-performance web applications and creative interactive experiences.",
-    images: ["/dip-avatar-v3.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
