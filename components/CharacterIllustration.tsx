@@ -68,7 +68,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
           transformStyle: "preserve-3d",
           transition: isHovered ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
         }}
-        className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[660px] 2xl:max-w-[720px] will-change-transform"
+        className="relative w-full will-change-transform flex justify-end"
       >
         {/* Atmospheric Ambient Glow Pulsing in Background */}
         <div className="absolute -inset-10 bg-gradient-to-tr from-[#7c3aed]/35 via-[#38bdf8]/20 to-[#ccff00]/25 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse duration-3000 transform scale-95" />
@@ -77,7 +77,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
         {/* Badge 1: Top-Right Role */}
         <div
           style={{ transform: "translateZ(35px)" }}
-          className="absolute -top-2 sm:-top-4 right-4 sm:right-10 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-[#ccff00] text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
+          className="absolute -top-2 sm:-top-4 right-1 sm:right-3 z-20 px-3 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-[#ccff00] text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
         >
           <Code2 className="w-3.5 h-3.5 text-[#ccff00]" />
           <span className="font-bold">Full-Stack Dev</span>
@@ -104,7 +104,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
         {/* Badge 4: Bottom-Right Hireable */}
         <div
           style={{ transform: "translateZ(45px)" }}
-          className="absolute bottom-2 sm:bottom-4 right-4 sm:right-8 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-emerald-500/40 text-xs font-mono text-emerald-300 flex items-center gap-2 shadow-xl cursor-default"
+          className="absolute bottom-2 sm:bottom-4 right-1 sm:right-3 z-20 px-3 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-emerald-500/40 text-xs font-mono text-emerald-300 flex items-center gap-2 shadow-xl cursor-default"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]" />
           <span className="font-bold">Available for Work</span>
@@ -123,10 +123,10 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
           </div>
         </div>
 
-        {/* Main Character Illustration with Click Event */}
+        {/* Main Character Illustration with Click Event - strictly pinned to right edge */}
         <div
           onClick={handleCharacterClick}
-          className="relative cursor-pointer group filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.8)]"
+          className="relative cursor-pointer group filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.8)] w-full flex justify-end"
           title="Click me for confetti!"
         >
           <Image
@@ -135,7 +135,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
             width={1024}
             height={1024}
             priority
-            className="w-full h-auto object-contain select-none pointer-events-none transition-transform duration-300 group-hover:brightness-105"
+            className="w-full max-h-[82vh] h-auto object-contain object-right select-none pointer-events-none transition-transform duration-300 group-hover:brightness-105"
           />
         </div>
 

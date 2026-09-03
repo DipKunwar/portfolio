@@ -92,9 +92,9 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Hero Illustration (always docked against the right sideline edge) */}
-          <div className="lg:col-span-6 xl:col-span-5 flex justify-end w-full mt-4 lg:mt-0">
-            <CharacterIllustration className="w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[660px] 2xl:max-w-[720px]" />
+          {/* Right Hero Illustration (strictly docked to the right screen boundary with 0px gap) */}
+          <div className="lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[46vw] lg:max-w-[750px] xl:max-w-[840px] 2xl:max-w-[920px] flex justify-end w-full mt-6 lg:mt-0 pr-0 -mr-4 sm:-mr-6 lg:mr-0 z-20 pointer-events-auto">
+            <CharacterIllustration className="w-full flex justify-end" />
           </div>
         </div>
 
