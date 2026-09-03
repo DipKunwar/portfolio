@@ -14,10 +14,10 @@ export default function Home() {
       {/* Top Navbar */}
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
-        {/* Hero Section with 3D Canvas */}
-        <Hero />
+      {/* Full-Width Hero Section */}
+      <Hero />
 
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
         {/* Showreel Card Section */}
         <section id="showreel" className="w-full pt-4 pb-8">
           <ShowreelCard />

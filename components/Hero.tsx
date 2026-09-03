@@ -18,10 +18,10 @@ export const Hero: React.FC = () => {
       {/* 3D Interactive Three.js WebGL Canvas Background */}
       <ThreeHeroCanvas />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 w-full max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 xl:pr-0 2xl:pr-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
           {/* Left Hero Content (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-4 sm:space-y-6">
+          <div className="lg:col-span-7 flex flex-col items-start space-y-4 sm:space-y-6 lg:pl-4 xl:pl-8 2xl:pl-12">
             {/* Handwritten "Hey, I'm" + Curved Arrow Doodle */}
             <div className="relative flex items-center gap-3 pl-2">
               <span className="font-['Caveat',cursive] text-2xl sm:text-3xl text-zinc-200 font-bold tracking-wide transform -rotate-3">
@@ -92,9 +92,9 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Hero Illustration (5 cols) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0">
-            <CharacterIllustration className="w-full max-w-[420px]" />
+          {/* Right Hero Illustration touching the right edge (5 cols) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0 lg:translate-x-4 xl:translate-x-8 2xl:translate-x-12">
+            <CharacterIllustration className="w-full max-w-[460px] sm:max-w-[540px] lg:max-w-[620px] xl:max-w-[700px] 2xl:max-w-[740px]" />
           </div>
         </div>
 

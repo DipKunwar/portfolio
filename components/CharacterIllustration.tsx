@@ -68,7 +68,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
           transformStyle: "preserve-3d",
           transition: isHovered ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
         }}
-        className="relative w-full max-w-[440px] sm:max-w-[500px] lg:max-w-[540px] will-change-transform"
+        className="relative w-full max-w-[460px] sm:max-w-[540px] lg:max-w-[620px] xl:max-w-[700px] 2xl:max-w-[740px] will-change-transform"
       >
         {/* Atmospheric Ambient Glow Pulsing in Background */}
         <div className="absolute -inset-10 bg-gradient-to-tr from-[#7c3aed]/35 via-[#38bdf8]/20 to-[#ccff00]/25 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse duration-3000 transform scale-95" />
