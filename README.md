@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dip Kunwar • Full-Stack Developer & BSc.IT Student Portfolio
 
-## Getting Started
+A creative, comic/graffiti-inspired developer portfolio website recreated faithfully from design specifications, tailored for **Dip Kunwar** (BSc.IT student at ISMT College, Sunderland University) with rich interactive **3D WebGL animations**, hand-drawn vector doodles, tactile 3D tilt effects, and responsive layout.
 
-First, run the development server:
+---
 
+## ✨ Features & Visual Highlights
+
+- **Hero & 3D Stage**:
+  - Interactive **Three.js WebGL background** featuring floating 3D wireframe dodecahedrons, glossy icosahedrons, toruses, glowing dust particles, and mouse parallax.
+  - Typographic title (`DIP KUNWAR`) with hand-drawn **neon lime crown doodle** above the name.
+  - Cheerful waving anime/cartoon character illustration in a purple hoodie with comic speech bubble: *"LET'S CREATE SOMETHING AWESOME!"*.
+  - Call-to-action buttons with hover glows and "Scroll Down" mouse indicator.
+
+- **Showreel Showcase**:
+  - Dark rounded 3D tilt card with ambient synthwave sunset cityscape artwork.
+  - Interactive toggle between **Cinematic Reel** and **Live 3D Scene** (interactive 3D workstation model with draggable 360° orbit controls and glowing IDE screen).
+  - Modal video player showcase.
+
+- **Featured Projects**:
+  - 4-column responsive grid featuring custom high-contrast comic vector banners:
+    1. **PADHUB F1** — Formula 1 Hub & Live Telemetry (`https://padhub3.vercel.app/`)
+    2. **STREAMVERSE** — Movies & Shows Streaming Platform (`https://streamverse-coral.vercel.app/`)
+    3. **PITCHHUB** — Live Football Match Streaming & Match Center (`https://pitchhub.vercel.app`)
+    4. **GROOVY TUNES** — Interactive WebGL Music & Sound Visualizer
+  - Clickable project cards opening modal dialogs with details, tech stack badges, live demo, and source code links.
+
+- **Skills & App Badges**:
+  - Squircle / hexagon badges matching the app-icon aesthetic in the reference design.
+  - Toggle between **Programming & CS Stack** (Next.js, TypeScript, Python, Node.js, Three.js, PostgreSQL) and **3D & Creative Tools** (Toon Boom, After Effects, Photoshop, Blender, Premiere Pro).
+  - Hover states with color-matched neon glows and 3D card tilt.
+
+- **About Me**:
+  - Left banner: Bright lime green comic poster with character sketch, handwritten *"FOCUS DISCIPLINE CONSISTENCY"* note, and graffiti splatters.
+  - Right: Story bio, CS undergrad credentials, and interactive *"Know More About Me"* modal displaying education, hackathon awards, and engineering philosophy.
+
+- **Contact & Footer**:
+  - Bold *"LET'S MAKE SOMETHING DOPE!"* title with hand-drawn purple loop and click-to-trigger confetti explosion.
+  - One-click copy email button with feedback indicator (`hello@dikshant.dev`).
+  - Social media icon pills (GitHub, LinkedIn, Instagram, YouTube, Web).
+  - Cute animated blue monster mascot making a peace sign.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, React 19, TypeScript)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **3D Graphics**: [Three.js](https://threejs.org/) (WebGL rendering, shaders, lights, and orbit math)
+- **Icons**: [Lucide React](https://lucide.dev/) & Custom SVG icons
+- **Micro-Interactions**: [canvas-confetti](https://www.npmjs.com/package/canvas-confetti)
+- **Deployment**: [Vercel](https://vercel.com)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Production Build
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌐 Deploy to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+This repository is configured for zero-config deployment on Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push this project to your GitHub, GitLab, or Bitbucket account.
+2. Go to [vercel.com/new](https://vercel.com/new).
+3. Import the repository.
+4. Click **Deploy**. Vercel will automatically detect Next.js and build static assets flawlessly.
