@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { ArrowUpRight, ArrowRight, X, ExternalLink } from "lucide-react";
 import { GithubIcon } from "./SocialIcons";
 import { TiltCard } from "./TiltCard";
@@ -15,6 +16,7 @@ interface Project {
   github: string;
   demo: string;
   accentColor: string;
+  logo?: string;
   renderArt: () => React.ReactNode;
 }
 
@@ -30,44 +32,16 @@ export const FeaturedProjects: React.FC = () => {
       tech: ["Next.js", "Tailwind CSS", "F1 Live API", "TypeScript"],
       github: "https://github.com/DipKunwar",
       demo: "https://padhub3.vercel.app/",
-      accentColor: "#facc15",
+      accentColor: "#ef4444",
+      logo: "/projects/padhub-logo.png",
       renderArt: () => (
-        <div className="relative w-full h-full bg-gradient-to-br from-[#facc15] via-[#fbbf24] to-[#ea580c] overflow-hidden flex items-center justify-center">
-          {/* F1 Speed Streaks & Track Lines */}
-          <svg viewBox="0 0 300 200" fill="none" className="absolute inset-0 w-full h-full opacity-50">
-            <line x1="0" y1="30" x2="300" y2="15" stroke="white" strokeWidth="5" />
-            <line x1="0" y1="70" x2="300" y2="55" stroke="white" strokeWidth="7" />
-            <line x1="0" y1="130" x2="300" y2="145" stroke="white" strokeWidth="6" />
-            <line x1="0" y1="170" x2="300" y2="185" stroke="white" strokeWidth="4" />
-            {/* Checkered flag corner */}
-            <g transform="translate(240, 10) scale(0.6)">
-              <rect x="0" y="0" width="16" height="16" fill="#18181b" />
-              <rect x="16" y="0" width="16" height="16" fill="white" />
-              <rect x="32" y="0" width="16" height="16" fill="#18181b" />
-              <rect x="0" y="16" width="16" height="16" fill="white" />
-              <rect x="16" y="16" width="16" height="16" fill="#18181b" />
-              <rect x="32" y="16" width="16" height="16" fill="white" />
-            </g>
-          </svg>
-          {/* F1 Race Car Silhouette Vector */}
-          <svg viewBox="0 0 160 80" fill="none" className="w-32 sm:w-36 h-auto relative z-10 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
-            {/* Rear Wing */}
-            <rect x="15" y="18" width="8" height="28" fill="#18181b" rx="2" />
-            <rect x="10" y="14" width="22" height="6" fill="#dc2626" rx="1" />
-            {/* Body Aerodynamics */}
-            <path d="M22 36 L65 34 L110 38 L145 46 L148 52 L35 52 Z" fill="#18181b" />
-            <path d="M50 34 L75 22 L90 28 L95 36 Z" fill="#dc2626" />
-            {/* Cockpit & Halo */}
-            <ellipse cx="78" cy="27" rx="6" ry="4" fill="#38bdf8" />
-            <path d="M72 26 C75 20 85 20 88 26" stroke="#f4f4f5" strokeWidth="2.5" fill="none" />
-            {/* Wheels */}
-            <ellipse cx="42" cy="52" rx="14" ry="12" fill="#09090b" stroke="#3f3f46" strokeWidth="3" />
-            <ellipse cx="126" cy="52" rx="14" ry="12" fill="#09090b" stroke="#3f3f46" strokeWidth="3" />
-            <circle cx="42" cy="52" r="4" fill="#dc2626" />
-            <circle cx="126" cy="52" r="4" fill="#dc2626" />
-            {/* Front Wing */}
-            <rect x="138" y="48" width="18" height="6" fill="#dc2626" rx="2" />
-          </svg>
+        <div className="relative w-full h-full bg-[#0c0f18] overflow-hidden flex items-center justify-center group/art">
+          <Image
+            src="/projects/padhub-cover.png"
+            alt="PadHub F1 Telemetry"
+            fill
+            className="object-cover object-center transition-transform duration-500 group-hover/art:scale-105 select-none"
+          />
         </div>
       ),
     },
@@ -80,35 +54,15 @@ export const FeaturedProjects: React.FC = () => {
       github: "https://github.com/DipKunwar",
       demo: "https://streamverse-coral.vercel.app/",
       accentColor: "#fb923c",
+      logo: "/projects/streamverse-logo.png",
       renderArt: () => (
-        <div className="relative w-full h-full bg-gradient-to-br from-[#ea580c] via-[#f97316] to-[#c2410c] overflow-hidden flex items-center justify-center">
-          {/* Cinema film roll strip */}
-          <div className="absolute top-2 inset-x-0 h-4 bg-black/40 flex justify-between px-2 items-center">
-            {[...Array(12)].map((_, i) => (
-              <span key={i} className="w-2.5 h-2.5 rounded-sm bg-white/40" />
-            ))}
-          </div>
-          <div className="absolute bottom-2 inset-x-0 h-4 bg-black/40 flex justify-between px-2 items-center">
-            {[...Array(12)].map((_, i) => (
-              <span key={i} className="w-2.5 h-2.5 rounded-sm bg-white/40" />
-            ))}
-          </div>
-          {/* TV Head & Cinema Screen Mascot */}
-          <div className="relative z-10 flex flex-col items-center drop-shadow-lg">
-            <div className="w-22 h-18 sm:w-24 sm:h-20 rounded-2xl bg-[#181824] border-4 border-[#fed7aa] shadow-xl flex items-center justify-center relative">
-              {/* Antennas */}
-              <div className="absolute -top-4 w-1 h-4 bg-[#fed7aa] transform -rotate-12 left-6" />
-              <div className="absolute -top-4 w-1 h-4 bg-[#fed7aa] transform rotate-12 right-6" />
-              {/* Play symbol on cinema screen */}
-              <div className="w-7 h-7 rounded-full bg-[#ef4444] flex items-center justify-center shadow-md">
-                <span className="text-white text-xs font-black ml-0.5">▶</span>
-              </div>
-            </div>
-            {/* Popcorn box / base */}
-            <div className="w-16 h-8 bg-[#b91c1c] rounded-b-lg border-2 border-white/20 mt-1 flex items-center justify-center">
-              <span className="text-white text-[9px] font-black font-mono">STREAM</span>
-            </div>
-          </div>
+        <div className="relative w-full h-full bg-[#0a0e1a] overflow-hidden flex items-center justify-center group/art">
+          <Image
+            src="/projects/streamverse-cover.png"
+            alt="StreamVerse Movies & Streaming"
+            fill
+            className="object-cover object-center transition-transform duration-500 group-hover/art:scale-105 select-none"
+          />
         </div>
       ),
     },
@@ -240,16 +194,29 @@ export const FeaturedProjects: React.FC = () => {
 
               {/* Info Row */}
               <div className="flex items-center justify-between pt-1">
-                <div>
-                  <h3 className="font-['Syne',sans-serif] text-base sm:text-lg font-black tracking-wide text-white uppercase group-hover:text-[#ccff00] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-xs text-zinc-400 font-medium font-['Plus_Jakarta_Sans',sans-serif]">
-                    {project.category}
-                  </p>
+                <div className="flex items-center gap-2.5 min-w-0">
+                  {project.logo && (
+                    <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 p-1 flex items-center justify-center flex-shrink-0 group-hover:border-[#ccff00]/40 transition-colors">
+                      <Image
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        width={24}
+                        height={24}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  )}
+                  <div className="min-w-0">
+                    <h3 className="font-['Syne',sans-serif] text-base sm:text-lg font-black tracking-wide text-white uppercase group-hover:text-[#ccff00] transition-colors truncate">
+                      {project.title}
+                    </h3>
+                    <p className="text-xs text-zinc-400 font-medium font-['Plus_Jakarta_Sans',sans-serif] truncate">
+                      {project.category}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-300 group-hover:bg-[#ccff00] group-hover:text-black group-hover:border-[#ccff00] transition-all">
+                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-300 group-hover:bg-[#ccff00] group-hover:text-black group-hover:border-[#ccff00] transition-all flex-shrink-0 ml-2">
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
               </div>
@@ -280,8 +247,19 @@ export const FeaturedProjects: React.FC = () => {
               {selectedProject.renderArt()}
             </div>
 
-            {/* Modal Title & Category */}
-            <div className="flex items-center justify-between mb-3">
+            {/* Modal Title & Category with Logo */}
+            <div className="flex items-center gap-3.5 mb-4">
+              {selectedProject.logo && (
+                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 p-2 flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Image
+                    src={selectedProject.logo}
+                    alt={`${selectedProject.title} logo`}
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              )}
               <div>
                 <span className="text-xs font-bold text-[#ccff00] uppercase tracking-wider">
                   {selectedProject.category}
