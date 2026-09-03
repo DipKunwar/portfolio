@@ -3,9 +3,63 @@ import { Agentation } from "agentation";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dipkunwar.com.np"),
   title: "Dip Kunwar | Full-Stack Developer & BSc.IT Student",
   description:
     "Portfolio of Dip Kunwar, a BSc.IT student at ISMT College (Sunderland University) and Full-Stack Developer building modern web applications, live streaming platforms, and interactive 3D WebGL experiences.",
+  keywords: [
+    "Dip Kunwar",
+    "Dip",
+    "Full-Stack Developer",
+    "BSc.IT Nepal",
+    "ISMT College",
+    "University of Sunderland",
+    "Nepal Web Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Creative Developer Nepal",
+    "Portfolio",
+  ],
+  authors: [{ name: "Dip Kunwar", url: "https://dipkunwar.com.np" }],
+  creator: "Dip Kunwar",
+  alternates: {
+    canonical: "https://dipkunwar.com.np",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://dipkunwar.com.np",
+    siteName: "Dip Kunwar Portfolio",
+    title: "Dip Kunwar | Full-Stack Developer & BSc.IT Student",
+    description:
+      "Full-Stack Developer & BSc.IT Student building digital products, real-time streaming platforms, and interactive 3D web experiences.",
+    images: [
+      {
+        url: "/dip-avatar-v3.png",
+        width: 1024,
+        height: 1024,
+        alt: "Dip Kunwar - Full-Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dip Kunwar | Full-Stack Developer & BSc.IT Student",
+    description:
+      "Full-Stack Developer building high-performance web applications and creative interactive experiences.",
+    images: ["/dip-avatar-v3.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
