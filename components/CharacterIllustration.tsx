@@ -9,15 +9,6 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
   const containerRef = useRef<HTMLDivElement>(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
-
-  const speechQuotes = [
-    "HELLO! WELCOME!",
-    "LET'S BUILD SOMETHING DOPE!",
-    "PRESS CTRL+K FOR TERMINAL!",
-    "READY TO COLLABORATE!",
-    "HAVE A LOOK AROUND!",
-  ];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -28,8 +19,8 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
     const centerY = rect.height / 2;
 
     // Subtle 3D tilt
-    const rotateX = ((y - centerY) / centerY) * -12;
-    const rotateY = ((x - centerX) / centerX) * 12;
+    const rotateX = ((y - centerY) / centerY) * -10;
+    const rotateY = ((x - centerX) / centerX) * 10;
     setRotate({ x: rotateX, y: rotateY });
   };
 
@@ -39,7 +30,6 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
   };
 
   const handleCharacterClick = () => {
-    setClickCount((prev) => prev + 1);
     confetti({
       particleCount: 80,
       spread: 70,
@@ -47,8 +37,6 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
       colors: ["#ccff00", "#7c3aed", "#38bdf8", "#ec4899"],
     });
   };
-
-  const currentQuote = speechQuotes[clickCount % speechQuotes.length];
 
   return (
     <div
@@ -63,8 +51,8 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
       <div
         style={{
           transform: `rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(${
-            isHovered ? 1.03 : 1
-          }, ${isHovered ? 1.03 : 1}, 1)`,
+            isHovered ? 1.02 : 1
+          }, ${isHovered ? 1.02 : 1}, 1)`,
           transformStyle: "preserve-3d",
           transition: isHovered ? "transform 0.1s ease-out" : "transform 0.5s ease-out",
         }}
@@ -77,7 +65,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
         {/* Badge 1: Top-Right Role */}
         <div
           style={{ transform: "translateZ(35px)" }}
-          className="absolute -top-3 sm:-top-5 right-2 sm:right-6 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-[#ccff00] text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
+          className="absolute -top-2 sm:-top-4 right-4 sm:right-10 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-[#ccff00] text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
         >
           <Code2 className="w-3.5 h-3.5 text-[#ccff00]" />
           <span className="font-bold">Full-Stack Dev</span>
@@ -86,7 +74,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
         {/* Badge 2: Mid-Left Education */}
         <div
           style={{ transform: "translateZ(40px)" }}
-          className="absolute top-1/4 -left-3 sm:-left-8 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-[#38bdf8] text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
+          className="absolute top-1/4 -left-2 sm:-left-6 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-[#38bdf8] text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
         >
           <GraduationCap className="w-3.5 h-3.5 text-[#38bdf8]" />
           <span className="font-bold">BSc.IT @ Sunderland</span>
@@ -95,7 +83,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
         {/* Badge 3: Bottom-Left Location */}
         <div
           style={{ transform: "translateZ(30px)" }}
-          className="absolute bottom-6 sm:bottom-10 -left-2 sm:-left-6 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-emerald-400 text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
+          className="absolute bottom-6 sm:bottom-10 -left-1 sm:-left-4 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-white/15 hover:border-emerald-400 text-xs font-mono text-zinc-200 flex items-center gap-2 shadow-xl hover:scale-105 transition-all cursor-default"
         >
           <MapPin className="w-3.5 h-3.5 text-emerald-400" />
           <span className="font-bold">Nepal 🇳🇵</span>
@@ -104,33 +92,20 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
         {/* Badge 4: Bottom-Right Hireable */}
         <div
           style={{ transform: "translateZ(45px)" }}
-          className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-emerald-500/40 text-xs font-mono text-emerald-300 flex items-center gap-2 shadow-xl cursor-default"
+          className="absolute bottom-2 sm:bottom-4 right-4 sm:right-8 z-20 px-3.5 py-1.5 rounded-full bg-[#121622]/90 backdrop-blur-md border border-emerald-500/40 text-xs font-mono text-emerald-300 flex items-center gap-2 shadow-xl cursor-default"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]" />
           <span className="font-bold">Available for Work</span>
         </div>
 
-        {/* Floating Interactive Speech Bubble */}
-        <div
-          onClick={handleCharacterClick}
-          style={{ transform: "translateZ(50px)" }}
-          className="absolute top-2 left-6 z-30 cursor-pointer group"
-          title="Click Dip to say something new!"
-        >
-          <div className="relative bg-white text-black font-['Permanent_Marker',cursive] text-xs sm:text-sm px-4 py-2 rounded-2xl shadow-2xl border-2 border-black transform -rotate-6 group-hover:rotate-0 group-hover:scale-105 transition-all">
-            <span>{currentQuote}</span>
-            <div className="absolute -bottom-2 left-5 w-0 h-0 border-l-[8px] border-l-transparent border-t-[10px] border-t-white border-r-[4px] border-r-transparent" />
-          </div>
-        </div>
-
-        {/* Main Character Illustration with Click Event */}
+        {/* Main Character Illustration with Click Event (Cache-busted image) */}
         <div
           onClick={handleCharacterClick}
           className="relative cursor-pointer group filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.8)]"
           title="Click me for confetti!"
         >
           <Image
-            src="/hero-character.png"
+            src="/dip-avatar-v3.png"
             alt="Dip Kunwar Hero Illustration"
             width={1024}
             height={1024}
