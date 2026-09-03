@@ -42,14 +42,14 @@ export const QuickContactModal: React.FC<{
 
     try {
       // Send via Web3Forms endpoint
-      await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "e88cf2f0-1c04-4c4f-9e7f-71b306b490f0",
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "e88cf2f0-1c04-4c4f-9e7f-71b306b490f0",
           to_email: "kunwardipson89@gmail.com",
           from_name: formData.name,
           email: formData.email,
@@ -58,10 +58,23 @@ export const QuickContactModal: React.FC<{
         }),
       });
 
+      const data = await response.json().catch(() => ({ success: false }));
+      if (data.success) {
+        setIsSubmitting(false);
+        setIsSuccess(true);
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ["#ccff00", "#38bdf8", "#8b5cf6"],
+        });
+        return;
+      }
+
+      // If key is unconfigured or blocked, seamlessly trigger mail client fallback
       setIsSubmitting(false);
       setIsSuccess(true);
-
-      // Trigger confetti celebration!
+      handleOpenMailClient();
       confetti({
         particleCount: 100,
         spread: 70,
@@ -72,6 +85,7 @@ export const QuickContactModal: React.FC<{
       // Fallback
       setIsSubmitting(false);
       setIsSuccess(true);
+      handleOpenMailClient();
       confetti({
         particleCount: 100,
         spread: 70,
