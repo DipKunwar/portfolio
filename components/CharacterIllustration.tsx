@@ -9,6 +9,15 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
   const containerRef = useRef<HTMLDivElement>(null);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+
+  const speechQuotes = [
+    "HELLO! WELCOME!",
+    "LET'S BUILD SOMETHING DOPE!",
+    "PRESS CTRL+K FOR TERMINAL!",
+    "READY TO COLLABORATE!",
+    "NEPAL ➔ THE WORLD 🚀",
+  ];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -30,6 +39,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
   };
 
   const handleCharacterClick = () => {
+    setClickCount((prev) => prev + 1);
     confetti({
       particleCount: 80,
       spread: 70,
@@ -37,6 +47,8 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
       colors: ["#ccff00", "#7c3aed", "#38bdf8", "#ec4899"],
     });
   };
+
+  const currentQuote = speechQuotes[clickCount % speechQuotes.length];
 
   return (
     <div
@@ -98,7 +110,20 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
           <span className="font-bold">Available for Work</span>
         </div>
 
-        {/* Main Character Illustration with Click Event (Cache-busted image) */}
+        {/* Clickable Easter Egg Dynamic Speech Bubble */}
+        <div
+          onClick={handleCharacterClick}
+          style={{ transform: "translateZ(55px)" }}
+          className="absolute -top-2 sm:top-2 left-2 sm:left-4 z-30 cursor-pointer group"
+          title="Click to cycle lines + launch confetti!"
+        >
+          <div className="relative bg-white text-black font-['Permanent_Marker',cursive] text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-2.5 rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.6)] border-2 border-black transform -rotate-3 group-hover:rotate-0 group-hover:scale-105 active:scale-95 transition-all duration-200">
+            <span className="tracking-wide select-none">{currentQuote}</span>
+            <div className="absolute -bottom-2.5 left-6 w-0 h-0 border-l-[8px] border-l-transparent border-t-[10px] border-t-white border-r-[4px] border-r-transparent" />
+          </div>
+        </div>
+
+        {/* Main Character Illustration with Click Event */}
         <div
           onClick={handleCharacterClick}
           className="relative cursor-pointer group filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.8)]"
