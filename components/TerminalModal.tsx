@@ -371,10 +371,11 @@ export const TerminalModal: React.FC<{
               <p className="text-[#38bdf8] font-bold">CONTACT CHANNELS:</p>
               <ul className="space-y-1 text-zinc-300">
                 <li>📧 Email: <a href="mailto:kunwardipson89@gmail.com" className="text-[#ccff00] hover:underline font-bold">kunwardipson89@gmail.com</a></li>
-                <li>📍 Location: <span className="text-white">Nepal (NPT)</span></li>
-                <li>📸 Instagram: <a href="https://instagram.com/dijsujdo" target="_blank" rel="noreferrer" className="text-pink-400 hover:underline">@dijsujdo</a></li>
+                <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/dip-kunwar-71b8b6433/" target="_blank" rel="noreferrer" className="text-[#38bdf8] hover:underline">linkedin.com/in/dip-kunwar</a></li>
                 <li>🐙 GitHub: <a href="https://github.com/DipKunwar" target="_blank" rel="noreferrer" className="text-white hover:underline">@DipKunwar</a></li>
-                <li>🌐 Official Domain: <a href="https://dipkunwar.com.np" target="_blank" rel="noreferrer" className="text-[#38bdf8] hover:underline">dipkunwar.com.np</a></li>
+                <li>📸 Instagram: <a href="https://instagram.com/dijsujdo" target="_blank" rel="noreferrer" className="text-pink-400 hover:underline">@dijsujdo</a></li>
+                <li>🌐 Official Domain: <a href="https://dipkunwar.com.np" target="_blank" rel="noreferrer" className="text-[#ccff00] hover:underline">dipkunwar.com.np</a></li>
+                <li>📍 Location: <span className="text-white">Parbat / Kathmandu, Nepal (NPT)</span></li>
               </ul>
             </div>
           ),

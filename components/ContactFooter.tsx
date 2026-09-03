@@ -127,7 +127,7 @@ export const ContactFooter: React.FC = () => {
                   <GithubIcon className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/dip-kunwar-71b8b6433/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 rounded-full bg-[#161c2a] border border-white/10 flex items-center justify-center text-zinc-300 hover:text-black hover:bg-[#ccff00] hover:border-[#ccff00] transition-all hover:scale-110"

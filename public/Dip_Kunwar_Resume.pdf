@@ -6,19 +6,21 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Annots [8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R] >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Annots [8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R] >>
 endobj
 4 0 obj
-<< /Length 7898 >>
+<< /Length 8069 >>
 stream
 BT /F1 22 Tf 0.060 0.090 0.160 rg 1 0 0 1 42.00 800.00 Tm (DIP KUNWAR) Tj ET
 BT /F1 10.5 Tf 0.050 0.450 0.650 rg 1 0 0 1 42.00 783.00 Tm (Full-Stack Software Developer  \225  BSc.IT \(University of Sunderland\)) Tj ET
-BT /F2 8.5 Tf 0.250 0.300 0.380 rg 1 0 0 1 42.00 768.00 Tm (Parbat, Nepal   |   ) Tj ET
-BT /F1 8.5 Tf 0.050 0.450 0.650 rg 1 0 0 1 117.00 768.00 Tm (kunwardipson89@gmail.com) Tj ET
-BT /F2 8.5 Tf 0.250 0.300 0.380 rg 1 0 0 1 237.00 768.00 Tm (   |   ) Tj ET
-BT /F1 8.5 Tf 0.050 0.450 0.650 rg 1 0 0 1 257.00 768.00 Tm (dipkunwar.com.np) Tj ET
-BT /F2 8.5 Tf 0.250 0.300 0.380 rg 1 0 0 1 347.00 768.00 Tm (   |   ) Tj ET
-BT /F1 8.5 Tf 0.050 0.450 0.650 rg 1 0 0 1 367.00 768.00 Tm (github.com/DipKunwar) Tj ET
+BT /F2 8.0 Tf 0.250 0.300 0.380 rg 1 0 0 1 42.00 768.00 Tm (Parbat, Nepal   |   ) Tj ET
+BT /F1 8.0 Tf 0.050 0.450 0.650 rg 1 0 0 1 108.00 768.00 Tm (kunwardipson89@gmail.com) Tj ET
+BT /F2 8.0 Tf 0.250 0.300 0.380 rg 1 0 0 1 218.00 768.00 Tm (   |   ) Tj ET
+BT /F1 8.0 Tf 0.050 0.450 0.650 rg 1 0 0 1 234.00 768.00 Tm (dipkunwar.com.np) Tj ET
+BT /F2 8.0 Tf 0.250 0.300 0.380 rg 1 0 0 1 314.00 768.00 Tm (   |   ) Tj ET
+BT /F1 8.0 Tf 0.050 0.450 0.650 rg 1 0 0 1 330.00 768.00 Tm (github.com/DipKunwar) Tj ET
+BT /F2 8.0 Tf 0.250 0.300 0.380 rg 1 0 0 1 424.00 768.00 Tm (   |   ) Tj ET
+BT /F1 8.0 Tf 0.050 0.450 0.650 rg 1 0 0 1 440.00 768.00 Tm (linkedin.com/in/dip-kunwar) Tj ET
 0.150 0.200 0.300 RG 1.5 w 42.00 757.00 m 553.28 757.00 l S
 BT /F1 10.5 Tf 0.060 0.090 0.160 rg 1 0 0 1 42.00 741.00 Tm (PROFESSIONAL SUMMARY) Tj ET
 0.820 0.850 0.900 RG 0.75 w 42.00 737.00 m 553.28 737.00 l S
@@ -92,45 +94,49 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
 endobj
 8 0 obj
-<< /Type /Annot /Subtype /Link /Rect [117.00 766.00 232.00 777.00] /Border [0 0 0] /A << /S /URI /URI (mailto:kunwardipson89@gmail.com) >> >>
+<< /Type /Annot /Subtype /Link /Rect [108.00 766.00 213.00 776.00] /Border [0 0 0] /A << /S /URI /URI (mailto:kunwardipson89@gmail.com) >> >>
 endobj
 9 0 obj
-<< /Type /Annot /Subtype /Link /Rect [257.00 766.00 342.00 777.00] /Border [0 0 0] /A << /S /URI /URI (https://dipkunwar.com.np) >> >>
+<< /Type /Annot /Subtype /Link /Rect [234.00 766.00 309.00 776.00] /Border [0 0 0] /A << /S /URI /URI (https://dipkunwar.com.np) >> >>
 endobj
 10 0 obj
-<< /Type /Annot /Subtype /Link /Rect [367.00 766.00 462.00 777.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/DipKunwar) >> >>
+<< /Type /Annot /Subtype /Link /Rect [330.00 766.00 420.00 776.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/DipKunwar) >> >>
 endobj
 11 0 obj
-<< /Type /Annot /Subtype /Link /Rect [423.28 585.00 553.28 595.00] /Border [0 0 0] /A << /S /URI /URI (https://padhub3.vercel.app) >> >>
+<< /Type /Annot /Subtype /Link /Rect [440.00 766.00 545.00 776.00] /Border [0 0 0] /A << /S /URI /URI (https://www.linkedin.com/in/dip-kunwar-71b8b6433/) >> >>
 endobj
 12 0 obj
-<< /Type /Annot /Subtype /Link /Rect [423.28 528.00 553.28 538.00] /Border [0 0 0] /A << /S /URI /URI (https://streamverse-coral.vercel.app) >> >>
+<< /Type /Annot /Subtype /Link /Rect [423.28 585.00 553.28 595.00] /Border [0 0 0] /A << /S /URI /URI (https://padhub3.vercel.app) >> >>
 endobj
 13 0 obj
-<< /Type /Annot /Subtype /Link /Rect [423.28 471.00 553.28 481.00] /Border [0 0 0] /A << /S /URI /URI (https://pitchhub.vercel.app) >> >>
+<< /Type /Annot /Subtype /Link /Rect [423.28 528.00 553.28 538.00] /Border [0 0 0] /A << /S /URI /URI (https://streamverse-coral.vercel.app) >> >>
 endobj
 14 0 obj
+<< /Type /Annot /Subtype /Link /Rect [423.28 471.00 553.28 481.00] /Border [0 0 0] /A << /S /URI /URI (https://pitchhub.vercel.app) >> >>
+endobj
+15 0 obj
 << /Type /Annot /Subtype /Link /Rect [423.28 424.50 553.28 434.50] /Border [0 0 0] /A << /S /URI /URI (https://dipkunwar.com.np) >> >>
 endobj
 xref
-0 15
+0 16
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
-0000000324 00000 n 
-0000008274 00000 n 
-0000008376 00000 n 
-0000008473 00000 n 
-0000008578 00000 n 
-0000008735 00000 n 
-0000008885 00000 n 
-0000009040 00000 n 
-0000009193 00000 n 
-0000009356 00000 n 
-0000009510 00000 n 
+0000000331 00000 n 
+0000008452 00000 n 
+0000008554 00000 n 
+0000008651 00000 n 
+0000008756 00000 n 
+0000008913 00000 n 
+0000009063 00000 n 
+0000009218 00000 n 
+0000009394 00000 n 
+0000009547 00000 n 
+0000009710 00000 n 
+0000009864 00000 n 
 trailer
-<< /Size 15 /Root 1 0 R >>
+<< /Size 16 /Root 1 0 R >>
 startxref
-9661
+10015
 %%EOF
