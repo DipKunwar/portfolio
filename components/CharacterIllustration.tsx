@@ -135,7 +135,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
             width={1024}
             height={1024}
             priority
-            className="w-full max-h-[82vh] h-auto object-contain object-right select-none pointer-events-none transition-transform duration-300 group-hover:brightness-105"
+            className="w-full h-auto object-contain object-right select-none pointer-events-none transition-transform duration-300 group-hover:brightness-105"
           />
         </div>
 
