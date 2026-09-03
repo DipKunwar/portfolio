@@ -46,6 +46,7 @@ const COMMAND_LIST = [
   { cmd: "stream", desc: "Launch STREAMVERSE Cinema in new tab" },
   { cmd: "pitch", desc: "Launch PITCHHUB Live Football in new tab" },
   { cmd: "repo", desc: "Open this portfolio's GitHub source code" },
+  { cmd: "resume", desc: "Open and download Dip Kunwar's official PDF resume" },
   { cmd: "date", desc: "Show current time in Nepal (NPT)" },
   { cmd: "clear", desc: "Clear terminal buffer screen" },
   { cmd: "exit", desc: "Close terminal session" },
@@ -411,6 +412,20 @@ export const TerminalModal: React.FC<{
           id: getNextLogId("resp"),
           type: "success",
           content: <p className="font-mono text-xs text-[#38bdf8]">Opening GitHub repository in new tab...</p>,
+        };
+        break;
+
+      case "resume":
+      case "cv":
+        window.open("/Dip_Kunwar_Resume.pdf", "_blank");
+        responseLog = {
+          id: getNextLogId("resp"),
+          type: "success",
+          content: (
+            <p className="font-mono text-xs text-[#ccff00]">
+              📄 Opening Dip Kunwar&apos;s Official Resume PDF in new tab... (<a href="/Dip_Kunwar_Resume.pdf" target="_blank" rel="noopener noreferrer" className="underline font-bold">Direct Link</a>)
+            </p>
+          ),
         };
         break;
 

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Menu, X, Sparkles, Terminal as TerminalIcon } from "lucide-react";
+import { Menu, X, Sparkles, Terminal as TerminalIcon, FileText } from "lucide-react";
 import { GithubIcon } from "./SocialIcons";
 import { PurpleSplash } from "./Doodles";
 import { TerminalModal } from "./TerminalModal";
@@ -108,6 +108,18 @@ export const Navbar: React.FC = () => {
 
         {/* Right Action Buttons */}
         <div className="flex items-center gap-2.5 sm:gap-3">
+          {/* Resume Download Link */}
+          <a
+            href="/Dip_Kunwar_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group px-3 sm:px-3.5 py-2 rounded-full bg-[#121622]/90 hover:bg-[#1a2133] border border-white/10 hover:border-[#ccff00]/60 text-zinc-300 hover:text-white flex items-center gap-1.5 text-xs font-mono transition-all shadow-md active:scale-95"
+            title="Download Dip Kunwar's CV / Resume"
+          >
+            <FileText className="w-3.5 h-3.5 text-[#ccff00]" />
+            <span className="font-semibold">CV</span>
+          </a>
+
           {/* Terminal Command Palette Trigger Button */}
           <button
             onClick={() => setIsTerminalOpen(true)}

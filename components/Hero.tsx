@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Play, ArrowUpRight } from "lucide-react";
+import { Play, ArrowUpRight, FileText } from "lucide-react";
 import { CrownDoodle, ArrowHandDrawn, ArrowDownCurved, SmileyDoodle, LightningDoodle } from "./Doodles";
 import { CharacterIllustration } from "./CharacterIllustration";
 import { ThreeHeroCanvas } from "./ThreeHeroCanvas";
@@ -73,6 +73,17 @@ export const Hero: React.FC = () => {
               >
                 <span>View Projects</span>
                 <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-[#ccff00] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+
+              {/* Resume / CV Button */}
+              <a
+                href="/Dip_Kunwar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-5 sm:px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/15 hover:border-[#ccff00]/50 text-zinc-300 hover:text-white font-bold text-sm sm:text-base flex items-center gap-2 transition-all hover:scale-105"
+              >
+                <FileText className="w-4 h-4 text-[#ccff00]" />
+                <span>Resume</span>
               </a>
 
               {/* Doodles near buttons: smiley face */}
