@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X, Sparkles, Terminal as TerminalIcon } from "lucide-react";
 import { GithubIcon } from "./SocialIcons";
 import { PurpleSplash } from "./Doodles";
@@ -55,13 +56,24 @@ export const Navbar: React.FC = () => {
           scrolled ? "backdrop-blur-md bg-[#0a0d14]/70 border-b border-white/5 shadow-lg" : "bg-transparent"
         }`}
       >
-        {/* Brand Logo */}
+        {/* Brand Logo with Mini Cartoon Avatar */}
         <a
           href="#home"
-          className="group flex items-center gap-0.5 relative z-20 font-['Syne',sans-serif] text-2xl sm:text-3xl font-black tracking-tight text-white hover:opacity-90 transition-opacity"
+          className="group flex items-center gap-2.5 sm:gap-3 relative z-20 hover:opacity-95 transition-all"
         >
-          <span>DIP KUNWAR</span>
-          <span className="text-[#ccff00] text-3xl font-black group-hover:animate-ping inline-block">.</span>
+          <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-[#ccff00] shadow-[0_0_12px_rgba(204,255,0,0.5)] overflow-hidden bg-[#121622] group-hover:scale-105 transition-transform flex-shrink-0">
+            <Image
+              src="/avatar-mini.png"
+              alt="Dip Kunwar Logo"
+              width={36}
+              height={36}
+              className="w-full h-full object-cover select-none"
+            />
+          </div>
+          <div className="flex items-center gap-0.5 font-['Syne',sans-serif] text-xl sm:text-2xl font-black tracking-tight text-white">
+            <span>DIP KUNWAR</span>
+            <span className="text-[#ccff00] text-2xl sm:text-3xl font-black group-hover:animate-ping inline-block">.</span>
+          </div>
         </a>
 
         {/* Desktop Nav Links */}
