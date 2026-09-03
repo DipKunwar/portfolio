@@ -56,7 +56,7 @@ export const CharacterIllustration = ({ className = "" }: { className?: string }
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
-      className={`relative flex items-center justify-center select-none py-6 ${className}`}
+      className={`relative flex items-center justify-end select-none py-6 ${className}`}
       style={{ perspective: "1000px" }}
     >
       {/* 3D Tilt Wrapper */}

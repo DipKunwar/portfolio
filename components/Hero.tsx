@@ -92,8 +92,8 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Hero Illustration (lg:col-span-6 xl:col-span-5) */}
-          <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0">
+          {/* Right Hero Illustration (always docked against the right sideline edge) */}
+          <div className="lg:col-span-6 xl:col-span-5 flex justify-end w-full mt-4 lg:mt-0">
             <CharacterIllustration className="w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[560px] xl:max-w-[660px] 2xl:max-w-[720px]" />
           </div>
         </div>
