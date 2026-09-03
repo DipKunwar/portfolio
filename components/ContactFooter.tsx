@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MapPin, Globe, Check, Copy, Sparkles } from "lucide-react";
+import { Mail, MapPin, Globe, Check, Copy, Sparkles, MessageSquare } from "lucide-react";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "./SocialIcons";
 import confetti from "canvas-confetti";
 import { DopeLoop, BlueMonster } from "./Doodles";
+import { QuickContactModal } from "./QuickContactModal";
 
 export const ContactFooter: React.FC = () => {
   const [copied, setCopied] = useState(false);
+  const [contactModalOpen, setContactModalOpen] = useState(false);
   const email = "kunwardipson89@gmail.com";
 
   const handleCopyEmail = () => {
@@ -83,6 +85,15 @@ export const ContactFooter: React.FC = () => {
                     {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   </span>
                 </button>
+
+                {/* Send a Quick Message Button */}
+                <button
+                  onClick={() => setContactModalOpen(true)}
+                  className="px-4 py-2 rounded-xl bg-[#ccff00] hover:bg-[#d9ff33] text-black text-xs font-mono font-bold flex items-center gap-2 shadow-[0_0_15px_rgba(204,255,0,0.4)] hover:scale-105 active:scale-95 transition-all mt-1 w-fit"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>Send a Quick Message</span>
+                </button>
               </div>
 
               {/* Location */}
@@ -125,7 +136,9 @@ export const ContactFooter: React.FC = () => {
                   <LinkedinIcon className="w-4 h-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://dipkunwar.com.np"
+                  target="_blank"
+                  rel="noreferrer"
                   className="w-10 h-10 rounded-full bg-[#161c2a] border border-white/10 flex items-center justify-center text-zinc-300 hover:text-black hover:bg-[#ccff00] hover:border-[#ccff00] transition-all hover:scale-110"
                   aria-label="Personal Portfolio"
                 >
@@ -143,10 +156,16 @@ export const ContactFooter: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="mt-16 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-2">
-          <p>© {new Date().getFullYear()} Dip. Crafted with Next.js, Tailwind CSS & Three.js.</p>
+          <p>© 2026 Dip. Crafted with Next.js, Tailwind CSS & Three.js.</p>
           <p className="font-mono">printf(&quot;YOOO, Whats up??&quot;);</p>
         </div>
       </div>
+
+      {/* Quick Contact Modal */}
+      <QuickContactModal
+        isOpen={contactModalOpen}
+        onClose={() => setContactModalOpen(false)}
+      />
     </footer>
   );
 };

@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { ShowreelCard } from "@/components/ShowreelCard";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { SkillsSection } from "@/components/SkillsSection";
+import { GitHubStatsCard } from "@/components/GitHubStatsCard";
 import { AboutSection } from "@/components/AboutSection";
 import { ContactFooter } from "@/components/ContactFooter";
 
@@ -27,6 +28,9 @@ export default function Home() {
 
         {/* Skills Section with App Badges */}
         <SkillsSection />
+
+        {/* GitHub Stats & Activity Card */}
+        <GitHubStatsCard />
 
         {/* About Me Section with Comic Character Frame */}
         <AboutSection />
