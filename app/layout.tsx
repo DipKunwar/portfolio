@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Agentation } from "agentation";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -74,6 +75,7 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <body className="min-h-screen bg-[#0a0d14] text-white selection:bg-[#ccff00] selection:text-black overflow-x-hidden">
         {children}
+        <Analytics />
         {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>
