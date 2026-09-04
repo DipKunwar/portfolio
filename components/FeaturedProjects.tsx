@@ -75,37 +75,15 @@ export const FeaturedProjects: React.FC = () => {
       github: "https://github.com/DipKunwar",
       demo: "https://pitchhub-omega.vercel.app",
       accentColor: "#22c55e",
+      logo: "/projects/pitchhub-logo.png",
       renderArt: () => (
-        <div className="relative w-full h-full bg-gradient-to-br from-[#15803d] via-[#16a34a] to-[#0f172a] overflow-hidden flex items-center justify-center">
-          {/* Football Field Pitch Lines */}
-          <svg viewBox="0 0 200 140" fill="none" className="absolute inset-0 w-full h-full opacity-60">
-            {/* Field boundary */}
-            <rect x="15" y="15" width="170" height="110" stroke="white" strokeWidth="2.5" />
-            {/* Half line */}
-            <line x1="100" y1="15" x2="100" y2="125" stroke="white" strokeWidth="2" />
-            {/* Center circle */}
-            <circle cx="100" cy="70" r="22" stroke="white" strokeWidth="2" />
-            <circle cx="100" cy="70" r="2" fill="white" />
-            {/* Penalty boxes */}
-            <rect x="15" y="42" width="28" height="56" stroke="white" strokeWidth="2" />
-            <rect x="157" y="42" width="28" height="56" stroke="white" strokeWidth="2" />
-          </svg>
-          {/* Dynamic Soccer Ball & Kick Vector */}
-          <div className="relative z-10 flex flex-col items-center">
-            <svg viewBox="0 0 80 80" fill="none" className="w-18 sm:w-20 h-auto drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
-              {/* Ball */}
-              <circle cx="40" cy="40" r="28" fill="white" stroke="#18181b" strokeWidth="4" />
-              {/* Classic football pentagon patches */}
-              <polygon points="40,24 49,31 46,41 34,41 31,31" fill="#18181b" />
-              <polygon points="40,12 34,16 46,16" fill="#18181b" />
-              <polygon points="56,33 63,33 60,42" fill="#18181b" />
-              <polygon points="24,33 17,33 20,42" fill="#18181b" />
-              <polygon points="34,58 40,64 46,58 43,50 37,50" fill="#18181b" />
-            </svg>
-            <span className="mt-1 px-2.5 py-0.5 bg-black/60 rounded-full text-[10px] font-extrabold text-[#ccff00] font-mono border border-white/10">
-              LIVE MATCH
-            </span>
-          </div>
+        <div className="relative w-full h-full bg-[#0a0e16] overflow-hidden flex items-center justify-center group/art">
+          <Image
+            src="/projects/pitchhub-cover.png"
+            alt="PitchHub Football Streaming"
+            fill
+            className="object-cover object-center transition-transform duration-500 group-hover/art:scale-105 select-none"
+          />
         </div>
       ),
     },
