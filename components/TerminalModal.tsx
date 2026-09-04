@@ -375,7 +375,7 @@ export const TerminalModal: React.FC<{
                 <li>🐙 GitHub: <a href="https://github.com/DipKunwar" target="_blank" rel="noreferrer" className="text-white hover:underline">@DipKunwar</a></li>
                 <li>📸 Instagram: <a href="https://instagram.com/dijsujdo" target="_blank" rel="noreferrer" className="text-pink-400 hover:underline">@dijsujdo</a></li>
                 <li>🌐 Official Domain: <a href="https://dipkunwar.com.np" target="_blank" rel="noreferrer" className="text-[#ccff00] hover:underline">dipkunwar.com.np</a></li>
-                <li>📍 Location: <span className="text-white">Parbat / Kathmandu, Nepal (NPT)</span></li>
+                <li>📍 Location: <span className="text-white">Gaindakot, Nawalpur, Nepal (NPT)</span></li>
               </ul>
             </div>
           ),
@@ -499,13 +499,11 @@ export const TerminalModal: React.FC<{
 
       {/* Terminal Window Container */}
       <div
-        className={`relative z-10 w-full transition-all duration-300 flex flex-col rounded-2xl border shadow-2xl overflow-hidden ${
-          isMaximized ? "h-[94vh] max-w-7xl" : "h-[600px] max-w-3xl"
-        } ${
-          isMatrixMode
+        className={`relative z-10 w-full transition-all duration-300 flex flex-col rounded-2xl border shadow-2xl overflow-hidden ${isMaximized ? "h-[94vh] max-w-7xl" : "h-[600px] max-w-3xl"
+          } ${isMatrixMode
             ? "bg-[#031508] border-[#22c55e]/50 shadow-[0_0_50px_rgba(34,197,94,0.3)]"
             : "bg-[#0c0e17] border-white/15 shadow-[0_0_50px_rgba(0,0,0,0.8)]"
-        }`}
+          }`}
       >
         {/* Terminal Header Bar */}
         <div className="flex items-center justify-between px-4 py-3 bg-[#131724] border-b border-white/10 select-none">
