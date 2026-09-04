@@ -156,8 +156,8 @@ export const ContactFooter: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="mt-16 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-2">
-          <p>© 2026 Dip. Crafted with Next.js, Tailwind CSS & Three.js.</p>
-          <p className="font-mono">printf(&quot;YOOO, Whats up??&quot;);</p>
+          <p>© 2026 Dip.</p>
+          <p className="font-mono">printf(&quot;YO-YO, Whats up??&quot;);</p>
         </div>
       </div>
 
