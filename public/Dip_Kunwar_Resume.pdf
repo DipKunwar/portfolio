@@ -9,7 +9,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Annots [8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R] >>
 endobj
 4 0 obj
-<< /Length 8069 >>
+<< /Length 8075 >>
 stream
 BT /F1 22 Tf 0.060 0.090 0.160 rg 1 0 0 1 42.00 800.00 Tm (DIP KUNWAR) Tj ET
 BT /F1 10.5 Tf 0.050 0.450 0.650 rg 1 0 0 1 42.00 783.00 Tm (Full-Stack Software Developer  \225  BSc.IT \(University of Sunderland\)) Tj ET
@@ -59,7 +59,7 @@ BT /F2 8.0 Tf 0.200 0.250 0.330 rg 1 0 0 1 66.00 498.00 Tm (Integrated TMDB REST
 BT /F1 7.5 Tf 0.050 0.450 0.650 rg 1 0 0 1 56.00 487.50 Tm (\225) Tj ET
 BT /F2 8.0 Tf 0.200 0.250 0.330 rg 1 0 0 1 66.00 487.50 Tm (Optimized video streaming player states using Video.js and user-made playback controls with responsive design.) Tj ET
 BT /F1 9.0 Tf 0.060 0.090 0.160 rg 1 0 0 1 50.00 473.00 Tm (PitchHub - Live Football Match Streaming & Tracker) Tj ET
-BT /F1 8.0 Tf 0.050 0.450 0.650 rg 1 0 0 1 423.28 473.00 Tm (https://pitchhub.vercel.app) Tj ET
+BT /F1 8.0 Tf 0.050 0.450 0.650 rg 1 0 0 1 423.28 473.00 Tm (https://pitchhub-omega.vercel.app) Tj ET
 BT /F3 8.0 Tf 0.400 0.450 0.520 rg 1 0 0 1 50.00 462.00 Tm (Technologies: Next.js, WebSockets, Live Sports API, Tailwind CSS) Tj ET
 BT /F1 7.5 Tf 0.050 0.450 0.650 rg 1 0 0 1 56.00 451.50 Tm (\225) Tj ET
 BT /F2 8.0 Tf 0.200 0.250 0.330 rg 1 0 0 1 66.00 451.50 Tm (Created a real-time football match tracker featuring live score updates, match fixtures, and interactive pitch tactics.) Tj ET
@@ -112,7 +112,7 @@ endobj
 << /Type /Annot /Subtype /Link /Rect [423.28 528.00 553.28 538.00] /Border [0 0 0] /A << /S /URI /URI (https://streamverse-coral.vercel.app) >> >>
 endobj
 14 0 obj
-<< /Type /Annot /Subtype /Link /Rect [423.28 471.00 553.28 481.00] /Border [0 0 0] /A << /S /URI /URI (https://pitchhub.vercel.app) >> >>
+<< /Type /Annot /Subtype /Link /Rect [423.28 471.00 553.28 481.00] /Border [0 0 0] /A << /S /URI /URI (https://pitchhub-omega.vercel.app) >> >>
 endobj
 15 0 obj
 << /Type /Annot /Subtype /Link /Rect [423.28 424.50 553.28 434.50] /Border [0 0 0] /A << /S /URI /URI (https://dipkunwar.com.np) >> >>
@@ -124,19 +124,19 @@ xref
 0000000058 00000 n 
 0000000115 00000 n 
 0000000331 00000 n 
-0000008452 00000 n 
-0000008554 00000 n 
-0000008651 00000 n 
-0000008756 00000 n 
-0000008913 00000 n 
-0000009063 00000 n 
-0000009218 00000 n 
-0000009394 00000 n 
-0000009547 00000 n 
-0000009710 00000 n 
-0000009864 00000 n 
+0000008458 00000 n 
+0000008560 00000 n 
+0000008657 00000 n 
+0000008762 00000 n 
+0000008919 00000 n 
+0000009069 00000 n 
+0000009224 00000 n 
+0000009400 00000 n 
+0000009553 00000 n 
+0000009716 00000 n 
+0000009876 00000 n 
 trailer
 << /Size 16 /Root 1 0 R >>
 startxref
-10015
+10027
 %%EOF

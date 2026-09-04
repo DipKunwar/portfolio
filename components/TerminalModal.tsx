@@ -235,7 +235,7 @@ export const TerminalModal: React.FC<{
                     <p className="text-zinc-400 text-xs">Live Football Streaming, Fixtures & Match Center</p>
                   </div>
                   <a
-                    href="https://pitchhub.vercel.app"
+                    href="https://pitchhub-omega.vercel.app"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1 px-3 py-1 bg-white/10 hover:bg-[#4ade80] hover:text-black rounded-lg text-xs font-bold transition-colors"
@@ -281,7 +281,7 @@ export const TerminalModal: React.FC<{
 
       case "pitch":
       case "pitchhub":
-        window.open("https://pitchhub.vercel.app", "_blank");
+        window.open("https://pitchhub-omega.vercel.app", "_blank");
         responseLog = {
           id: getNextLogId("resp"),
           type: "success",

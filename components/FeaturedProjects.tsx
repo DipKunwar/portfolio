@@ -73,7 +73,7 @@ export const FeaturedProjects: React.FC = () => {
       desc: "A dedicated live football match streaming and tracker portal featuring live score updates, match fixtures, interactive lineup tactics, and high-definition streams.",
       tech: ["Next.js", "WebSockets", "Live Sports API", "Tailwind"],
       github: "https://github.com/DipKunwar",
-      demo: "https://pitchhub.vercel.app",
+      demo: "https://pitchhub-omega.vercel.app",
       accentColor: "#22c55e",
       renderArt: () => (
         <div className="relative w-full h-full bg-gradient-to-br from-[#15803d] via-[#16a34a] to-[#0f172a] overflow-hidden flex items-center justify-center">
@@ -116,7 +116,7 @@ export const FeaturedProjects: React.FC = () => {
       desc: "A responsive, reactive 3D WebGL audio visualizer synchronized to Web Audio frequency bands with custom frequency shaders.",
       tech: ["Three.js", "React", "Web Audio API", "GLSL"],
       github: "https://github.com/DipKunwar",
-      demo: "https://pitchhub.vercel.app",
+      demo: "https://pitchhub-omega.vercel.app",
       accentColor: "#bef264",
       renderArt: () => (
         <div className="relative w-full h-full bg-gradient-to-br from-[#065f46] via-[#047857] to-[#0f172a] overflow-hidden flex items-center justify-center">
